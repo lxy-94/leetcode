@@ -28,3 +28,15 @@ class BinInsert:
         m <<= j
         #    或 运算
         return n | m
+
+
+
+def dec2bin(x):
+  x -= int(x)
+  bins = '0.'
+  while x:
+    x *= 2
+    bi = (1 if x>=1. else 0)
+    bins+=str(bi)
+    x -= int(x)
+  return bins
